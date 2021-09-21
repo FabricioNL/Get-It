@@ -1,0 +1,18 @@
+{% extends "notes/index.html" %}
+{% load static %}
+{% block content_note %}
+<div class="card" id="card">
+    <form method="post" action = "save" class="edit">
+        {% csrf_token %}
+        <input class="form-card-title-update" type="text" name="title" value="{{note.title}}"/>
+        
+        <textarea class="form-card-content-update" type="text" name="content" />{{note.content}}</textarea>
+        
+        <input class="form-card-id-update" type="text" name="id_card" value = "{{note.id}}"/>
+        
+        <button class="save-button" type="submit">
+            <img src="{% static 'notes/img/check.png' %}" alt="update" width="20" height="20"/>
+        </button>
+    </form>
+</div>
+{% endblock %}

@@ -7,4 +7,6 @@ urlpatterns = [
     path('update/<int:id>', views.update, name='update'),
     path('delete', views.delete, name='delete'),
     path('update/save', views.save, name='editing'),
+    path('tags', views.tags, name='all-tags'),
+    path('tags/<str:name>', views.tagVisualization, name="Tag-notes"),
 ]

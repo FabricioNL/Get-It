@@ -88,9 +88,10 @@ Algumas informações úteis e dicas:
  .appbar {
    position: relative;
    display: flex;
-   align-items: center;
+   align-items: stretch;
    padding: 10px 4px;
    overflow: hidden;
+   justify-content: space-between;
  
    border-width: 0;
    outline: none;
@@ -102,6 +103,11 @@ Algumas informações úteis e dicas:
  
    font-family: "roboto", sans-serif;
  }
+
+ .div-appbar {
+   display: flex;
+   align-items: center;
+ }
  
  .logo {
    width: 3rem;
@@ -109,6 +115,17 @@ Algumas informações úteis e dicas:
    padding-right: 1rem;
   
  }
+
+ .tags {
+   background-color: #FC9E4F;
+   border-radius: 5px;
+   width: 100px;
+   margin-right: 10px;
+   border: 0px;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+   font-family: "roboto", sans-serif;
+ }
+
  
  .subtitle {
    color: #4c4c4c;
@@ -124,13 +141,19 @@ Algumas informações úteis e dicas:
  
  }
  
+ .header-note {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+ }
+
  .card {
    background-color:   #ef89ba;
-   display: flex;
+   /*display: flex;
    flex-direction: column;
    align-content: space-around;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-around;*/
    width: 200px;
    height: 100px;
    border-radius: 4px;
@@ -249,13 +272,22 @@ Algumas informações úteis e dicas:
    font-size: 20px;
    font-family: 'Roboto', sans-serif;
  }
+
+ .form-card-tag {
+  width: 500px;
+  outline: none;
+  border-color: transparent;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+ }
  
  .autoresize {
    width: 500px;
    outline: none;
    border-color: transparent;
    font-family: 'Roboto', sans-serif;  
-   font-size: 10px;
+   font-size: 15px;
    margin: 2px;
  }
  
@@ -267,14 +299,15 @@ Algumas informações úteis e dicas:
  }
  
  .update {
-   background-color: white; 
+   background-color: transparent; 
    border-radius: 5px;
-   height: 35px;
-   width: 35px;
+   height: 25px;
+   width: 25px;
    border: 0px;
    margin: 2px;
    position: relative;
    right: -7px;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
  }
 
  .delete {
@@ -285,8 +318,8 @@ Algumas informações úteis e dicas:
   border: 0px;
   margin: 2px;
   position: relative;
-  top: -70px;
-  right: -40px;
+  top: -60px;
+  right: -30px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -324,6 +357,12 @@ Algumas informações úteis e dicas:
   margin-bottom: 5px;
  }
 
+ .form-card-tag-update {
+  margin-top: 5px; 
+  border: 2px;
+  margin-bottom: 5px;
+ }
+
  .form-card-title-update {
   margin-top: 5px; 
   border: 2px;
@@ -334,11 +373,67 @@ Algumas informações úteis e dicas:
  .edit {
    display: flex;
    flex-direction: column;
- }
+   width: 220px;
+  }
  
  .save-button {
    background-color: transparent;
    border: 0;
  }
+
+  /*
+ .tags-table {
+  margin-top: 20px;
+  display: flex;
+  border:1px solid black;
+  width:100%;
+  height: 400px;
+  align-items: center;
+  flex-direction: column;
+ }
+
+ td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}*/
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.tags-tags {
+  border: 0px;
+  background-color: transparent;
+}
  
  

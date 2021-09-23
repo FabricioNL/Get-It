@@ -4,26 +4,37 @@
 
 {% for note in notes %}
 <div class="card" id="card">
-    <div class = title>
-        <h3 class="card-title">{{note.title}}</h3>
-        <div class = buttons>
-            <button class="update" type="submit" formmethod="post"  onclick="document.location='update/{{note.id}}'">
-                <img src="{% static 'notes/img/editing.png'%}" alt="update" width="20" height="20" class= imgUpdate/>
-            </button>
-            <form method="post" action = "delete" class="form-delete">
-                {% csrf_token %}
-                <input
-                class="form-card-delete"
-                type="text"
-                name="id_card"
-                value = {{note.id}}
-                />
-                <button class= "delete" type="submit"}>
-                    <img src="{% static 'notes/img/close.png'%}" alt="delete" width="13" height="13" />
+        <div class=header-note>
+            <h3 class="card-title">{{note.title}}</h3>
+            <div class="buttons">
+                <button class="update" type="submit" formmethod="post"  onclick="document.location='update/{{note.id}}'">
+                    <img src="{% static 'notes/img/editing.png'%}" alt="update" width="20" height="20" class= imgUpdate/>
                 </button>
-            </form>
+
+                <form method="post" action = "delete">
+                    {% csrf_token %}
+                    <input
+                    class="form-card-delete"
+                    type="text"
+                    name="id_card"
+                    value = {{note.id}}
+                    />
+                    <button class= "delete" type="submit"}>
+                        <img src="{% static 'notes/img/close.png'%}" alt="delete" width="13" height="13" />
+                    </button>
+                </form>
+            </div>
         </div>
-    </div>
+        
+        <form method="post" action = "delete" class="form-delete">
+            {% csrf_token %}
+            <input
+            class="form-card-delete"
+            type="text"
+            name="id_card"
+            value = {{note.id}}
+            />
+        </form>
     <div class="card-content">
         <p>{{note.content}}</p>
     </div>

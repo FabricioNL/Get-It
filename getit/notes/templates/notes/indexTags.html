@@ -29,36 +29,8 @@
     <button class="tags" type="submit" formmethod="post" onclick="document.location='tags'">Tags</button>
   </div>
   <main class="container">
-    <form class="form-card" method="post">
-      {% csrf_token %}
-      
-      <input
-        class="form-card-title"
-        type="text"
-        name="titulo"
-        placeholder="Título"
-      />
-
-      <textarea
-        class="autoresize"
-        name="detalhes"
-        placeholder="Digite o conteúdo..."
-      ></textarea>
-      
-      <input
-        class = "form-card-tag"
-        type = "text"
-        name = "tag"
-        placeholder = "Tag de identificação"
-      />
-
-      <button class="btn" type="submit">Criar</button>
-    </form>
-    <div class="card-container">
-      {% block content_note %}
-      {% endblock %}
-      
-    </div>
+    {% block content_tag %}
+    {% endblock %}
   </main>
   <script type="text/javascript" src="{% static 'notes/js/getit.js' %}"></script>
 </body>

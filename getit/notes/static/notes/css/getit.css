@@ -409,7 +409,7 @@ Algumas informações úteis e dicas:
 }
 
 .styled-table thead tr {
-  background-color: #009879;
+  background-color: #fcb02b;
   color: #ffffff;
   text-align: left;
 }
@@ -428,7 +428,7 @@ Algumas informações úteis e dicas:
 }
 
 .styled-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
+  border-bottom: 2px solid #fcb02b;
 }
 
 .tags-tags {

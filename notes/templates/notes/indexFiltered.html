@@ -26,38 +26,11 @@
       <img src="{% static 'notes/img/logo-getit.png' %}" class="logo" />
       <span class="subtitle">Como o Post-it, mas com outro verbo</span>
     </div>
-    <button class="tags" type="submit" formmethod="post" onclick="document.location='tags'">Tags</button>
+    <button class="tags" type="submit" formmethod="post" onclick="document.location='Home'"><b>Home</b></button>
   </div>
-  <main class="container">
-    <form class="form-card" method="post">
-      {% csrf_token %}
-      
-      <input
-        class="form-card-title"
-        type="text"
-        name="titulo"
-        placeholder="Título"
-      />
-
-      <textarea
-        class="autoresize"
-        name="detalhes"
-        placeholder="Digite o conteúdo..."
-      ></textarea>
-      
-      <input
-        class = "form-card-tag"
-        type = "text"
-        name = "tag"
-        placeholder = "Insira uma tag para identificar o seu get-it =)"
-      />
-
-      <button class="btn" type="submit">Criar</button>
-    </form>
     <div class="card-container">
       {% block content_note %}
       {% endblock %}
-      
     </div>
   </main>
   <script type="text/javascript" src="{% static 'notes/js/getit.js' %}"></script>

@@ -82,4 +82,7 @@ def tags(request):
 def tagVisualization(request, name):
     t = Tag.objects.get(tag = name)
     Notes = Note.objects.all().filter(tag=t)
-    return render(request, 'notes/note.html', {'notes': Notes})
+    return render(request, 'notes/noteFiltered.html', {'notes': Notes})
+
+def goHome(request):
+    return redirect('index')
